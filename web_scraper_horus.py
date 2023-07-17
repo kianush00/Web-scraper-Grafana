@@ -56,7 +56,7 @@ wait_duration = 5
 loop_duration = 15
 acum_NAs = 0
 acum_altas_temps = 0
-alta_temp_limite = 37
+alta_temp_limite = 28
 message = ""
 limite_intentos = 20
 
@@ -108,7 +108,7 @@ while True:
         
         #En caso de que acum_altas_temps llegue a 20
         if acum_altas_temps >= limite_intentos:
-            message = f"La temperatura de la sala acaba de llegar a los {temp_pasillo_dos} grados celcius, REVISAR VENTILADORES!"
+            message = f"La temperatura del pasillo 2 de la sala acaba de llegar a los {temp_pasillo_dos} grados celcius, REVISAR VENTILADORES!"
 
         print(message)
         bot.send_message(KIA_USER_ID, message)
